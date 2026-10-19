@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rosa: #d87891;
+  --rosa-claro: #fff2f5;
+  --morado: #6f4d73;
+  --verde: #66815e;
+  --verde-claro: #edf4e9;
+  --texto: #312b32;
+  --blanco: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  color: var(--texto);
+  background: linear-gradient(135deg, #fff7f8, #faf6ed);
+}
+
+.contenedor {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 65px 0;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.subtitulo {
+  color: var(--rosa);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 5vw, 4.3rem);
+  color: #49344c;
+  margin-bottom: 15px;
+}
+
+.descripcion {
+  color: #786d74;
+  font-size: 1rem;
+}
+
+.menu-emprendimientos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.tarjeta {
+  overflow: hidden;
+  border-radius: 22px;
+  background-color: var(--blanco);
+  box-shadow: 0 12px 30px rgba(65, 41, 55, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(65, 41, 55, 0.2);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 255px;
+  display: block;
+  object-fit: cover;
+}
+
+.contenido-tarjeta {
+  padding: 25px;
+}
+
+.numero {
+  display: inline-block;
+  margin-bottom: 13px;
+  color: var(--rosa);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tarjeta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.65rem;
+  margin-bottom: 12px;
+  color: #473344;
+}
+
+.tarjeta p {
+  min-height: 72px;
+  color: #756b71;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.boton {
+  width: 100%;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--rosa);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.boton:hover {
+  background-color: #b85672;
+  transform: scale(1.02);
+}
+
+/* Colores diferentes para cada tarjeta */
+.belleza .numero {
+  color: #a868ae;
+}
+
+.belleza .boton {
+  background-color: #9a699b;
+}
+
+.belleza .boton:hover {
+  background-color: #7e527f;
+}
+
+.te .numero {
+  color: var(--verde);
+}
+
+.te .boton {
+  background-color: var(--verde);
+}
+
+.te .boton:hover {
+  background-color: #4e6947;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(35, 23, 32, 0.55);
+  z-index: 100;
+}
+
+.modal.activo {
+  display: flex;
+}
+
+.modal-contenido {
+  position: relative;
+  width: min(430px, 100%);
+  padding: 42px 30px 30px;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+  animation: aparecer 0.3s ease;
+}
+
+.modal-contenido h2 {
+  font-family: "Playfair Display", serif;
+  color: #49344c;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.modal-contenido p {
+  color: #70656b;
+  line-height: 1.6;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  color: #6d5867;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Adaptación para celular y tablet */
+@media (max-width: 900px) {
+  .menu-emprendimientos {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .tarjeta img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 45px 0;
+  }
+
+  .tarjeta img {
+    height: 220px;
+  }
+
+  .contenido-tarjeta {
+    padding: 22px;
+  }
+}

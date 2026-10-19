@@ -1,0 +1,104 @@
+/* Estilos Generales */
+body {
+    font-family: 'Georgia', serif; /* Fuente más cálida y natural */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc; /* Fondo beige arena */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #8fbc8f; /* Verde bosque */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 2px solid #556b2f; /* Verde oscuro */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif; /* Fuente más elegante */
+}
+
+header p {
+    font-size: 1.1em;
+    margin-top: 0.5rem;
+}
+
+section {
+    padding: 2rem 10%;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 900px;
+}
+
+h2 {
+    color: #556b2f; /* Verde oscuro */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    color: #8fbc8f; /* Verde bosque */
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.3em;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+strong {
+    color: #556b2f;
+}
+
+/* Estilos para Imágenes */
+.imagenes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.imagenes-container img {
+    width: calc(33.33% - 10px); /* Tres imágenes por fila */
+    height: 200px; /* Altura fija para uniformidad */
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive para imágenes */
+@media (max-width: 768px) {
+    .imagenes-container img {
+        width: calc(50% - 10px); /* Dos imágenes por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .imagenes-container img {
+        width: 100%; /* Una imagen por fila en pantallas pequeñas */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #8fbc8f;
+    color: #fff;
+    margin-top: 2rem;
+    font-size: 0.9em;
+}

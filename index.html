@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegí tu emprendimiento</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fuente bonita desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="contenedor">
+      <section class="encabezado">
+        <p class="subtitulo">BIENVENIDA</p>
+        <h1>Elegí tu emprendimiento</h1>
+        <p class="descripcion">Descubrí una opción pensada para vos.</p>
+      </section>
+
+      <section class="menu-emprendimientos">
+        <!-- OPCIÓN 1: MODA -->
+        <article class="tarjeta moda">
+          <!-- La imagen de moda va en: images/moda.jpg -->
+          <img src="empren(3)1.jpg" alt="Emprendimiento de moda" />
+
+          <div class="contenido-tarjeta">
+            <span class="numero">01</span>
+            <h2>Emprendimiento de Moda</h2>
+            <p>Prendas, accesorios y estilo para expresar tu personalidad.</p>
+            <a href="empre1.html"><button class="boton" data-opcion="moda">Ver moda</button></a>
+          </div>
+        </article>
+
+        <!-- OPCIÓN 2: BELLEZA -->
+        <article class="tarjeta belleza">
+          <!-- La imagen de belleza va en: images/belleza.jpg -->
+          <img src="empren(2)1.jpg" alt="Emprendimiento de belleza" />
+
+          <div class="contenido-tarjeta">
+            <span class="numero">02</span>
+            <h2>Emprendimiento de Belleza</h2>
+            <p>Productos y cuidados para resaltar tu belleza natural.</p>
+            <a href="empre2.html"><button class="boton" data-opcion="belleza">Ver belleza</button></a>
+          </div>
+        </article>
+
+        <!-- OPCIÓN 3: TÉ NATURAL -->
+        <article class="tarjeta te">
+          <!-- La imagen de té va en: images/te-natural.jpg -->
+          <img src="empren(1)1.jpg" alt="Emprendimiento de té natural" />
+
+          <div class="contenido-tarjeta">
+            <span class="numero">03</span>
+            <h2>Emprendimiento de Té Natural</h2>
+            <p>
+              Infusiones naturales para disfrutar, relajarte y sentirte bien.
+            </p>
+            <a href="empre3.html"><button class="boton" data-opcion="te natural">
+              Ver té natural
+            </button></a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Ventana emergente al tocar un botón -->
+    <div class="modal" id="modal">
+      <div class="modal-contenido">
+        <button class="cerrar" id="cerrarModal" aria-label="Cerrar">×</button>
+        <h2 id="tituloModal">Título</h2>
+        <p id="textoModal">Texto</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
